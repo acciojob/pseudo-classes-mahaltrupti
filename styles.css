@@ -1,53 +1,50 @@
-/*  your css code here. If applicable */
-  <style>
+  :root {
+      --page-bg: rgb(135, 206, 235);
+    }
     body {
-      background-color: #87CEEB; /* light blue */
+      background-color: var(--page-bg);
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
+      padding: 20px;
     }
 
-    /* Header bar */
-    header {
-      background-color: #000;
-      color: #fff;
+    /* Article with paragraphs */
+    article p:first-child {
+      color: white;
+      background-color: black;
       padding: 10px;
-      font-size: 14px;
     }
 
-    /* Paragraphs under header */
-    p {
-      margin: 10px;
-      font-size: 14px;
-      line-height: 1.5;
-    }
-
-    /* List styling */
-    ul {
-      list-style-type: disc;
-      width: 300px;
-      margin: 20px;
-      padding: 0;
-    }
-
-    li {
+    article p:nth-child(2) {
+      color: initial; /* Standard text color */
       padding: 10px;
-      margin: 2px 0;
     }
 
-    /* Custom colors for list items */
-    li:nth-child(1),
-    li:nth-child(5) {
-      font-weight: bold;
-      background-color: #ddd;
+    article p:last-child {
+      color: red;
+      padding: 10px;
     }
 
-    li:nth-child(2),
-    li:nth-child(4) {
+    /* Unordered list styling */
+    ul li {
+      width: 50%;
+      padding: 10px;
+      background-color: gray;
+      list-style: none;
+      margin: 5px 0;
+    }
+
+    /* Odd items have white background */
+    ul li:nth-child(odd) {
+      background-color: white;
+    }
+
+    /* First and last items font size */
+    ul li:first-child,
+    ul li:last-child {
+      font-size: 22px;
+    }
+
+    /* Third-to-last item pink background */
+    ul li:nth-last-child(3) {
       background-color: pink;
     }
-
-    li:nth-child(3) {
-      background-color: #f08080; /* light red */
-    }
-  </style>
